@@ -1,10 +1,25 @@
 <div id="userAdd">
   <h1>Add a user</h1>
-  <%= form_for(@user) do |f| %>
-
+  <%= form_for(@user) do |u| %>
     <div class="field">
-      <h4><%= f.label "Please enter a name" %><br>
-      <%= f.text_field :name %></h4>
+      <h4><%= u.label "Please enter a user name" %><br>
+      <%= u.text_field :name %></h4>
+    </div>
+    <div class="actions">
+      <%= u.submit 'Add', :class => 'btn btn-success', :id => "stgbutton" %>
+    </div>
+  <% end %>
+</div>
+
+<div id="roomAdd">
+  <h1>Add a room</h1>
+  <%= form_for(@room) do |r| %>
+    <div class="field">
+      <h4><%= r.label "Please enter a room number" %><br>
+      <%= r.text_field :room_number %></h4>
+    </div>
+    <div class="actions">
+      <%= r.submit 'Add', :class => 'btn btn-success', :id => "stgbutton" %>
     </div>
   <% end %>
 </div>
@@ -40,4 +55,8 @@
   <% end %>
 </div>
 
+<%= render 'rooms/index' %>
+<br>
+<%= render 'users/index' %>
+<br>
 <%= render 'bookings/index' %>

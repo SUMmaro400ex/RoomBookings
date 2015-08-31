@@ -1,6 +1,7 @@
 <% @bookings.each do |b| %>
-  <%= b.user_id %>
-  <%= b.room_id %>
+  <%= b.user.name %>
+  <%= b.room.room_number %>
   <%= b.start_time %>
   <%= b.end_time %>
+  <br>
 <% end %>
