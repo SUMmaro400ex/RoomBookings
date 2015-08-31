@@ -1,7 +1,8 @@
+<ul>
 <% @bookings.each do |b| %>
-  <%= b.user.name %>
+  <li><%= b.user.name %>
   <%= b.room.room_number %>
   <%= b.start_time %>
-  <%= b.end_time %>
-  <br>
+  <%= b.end_time %></li>
 <% end %>
+</ul>

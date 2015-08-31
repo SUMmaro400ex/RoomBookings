@@ -29,13 +29,14 @@
   <%= form_for(@booking) do |f| %>
 
     <div class="field">
-      <h4><%= f.label "Please enter a user number" %><br>
-      <%= f.text_field :user_id %></h4>
+      <h4><%= f.label "Please select a user" %><br>
+      <%= collection_select(:booking, :user_id, @users, :id, :name, :prompt => true) %>
+      </h4>
     </div>
 
     <div class="field">
-      <h4><%= f.label "Please enter a room number" %><br>
-        <%= f.text_field :room_id %></h4>
+      <h4><%= f.label "Please select a room number" %><br>
+      <%= collection_select(:booking, :room_id, @rooms, :id, :room_number, :prompt => true) %>
     </div>
 
     <div class="field formdate">
