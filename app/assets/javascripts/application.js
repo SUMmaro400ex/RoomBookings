@@ -14,3 +14,24 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on("ready page:load", function(){
+  $("#user").click(function(){
+    $("#userAdd").toggleClass("hidden");
+    $(this).text(function(i, text){
+      return text === "Add a User" ? "Hide Add a User" : "Add a User";
+    })
+  });
+  $("#room").click(function(){
+    $("#roomAdd").toggleClass("hidden");
+    $(this).text(function(i, text){
+      return text === "Add a Room" ? "Hide Add a Room" : "Add a Room";
+    })
+  });
+  $("#booking").click(function(){
+    $("#bookingAdd").toggleClass("hidden");
+    $(this).text(function(i, text){
+      return text === "Add a Booking" ? "Hide Add a Booking" : "Add a Booking";
+    })
+  });
+});

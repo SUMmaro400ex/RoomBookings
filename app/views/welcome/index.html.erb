@@ -1,5 +1,9 @@
-<div id="userAdd">
-  <h1>Add a user</h1>
+<button id="user">Add a User</button>
+<button id="room">Add a Room</button>
+<button id="booking">Add a Booking</button>
+
+<div class="hidden" id="userAdd">
+  <h1>Add A User</h1>
   <%= form_for(@user) do |u| %>
     <div class="field">
       <h4><%= u.label "Please enter a user name" %><br>
@@ -11,8 +15,9 @@
   <% end %>
 </div>
 
-<div id="roomAdd">
-  <h1>Add a room</h1>
+
+<div class="hidden" id="roomAdd">
+  <h1>Add A Room</h1>
   <%= form_for(@room) do |r| %>
     <div class="field">
       <h4><%= r.label "Please enter a room number" %><br>
@@ -24,8 +29,8 @@
   <% end %>
 </div>
 
-<div id="bookingAdd">
-  <h1>Add a booking</h1>
+<div class="hidden" id="bookingAdd">
+  <h1>Add A Booking</h1>
   <%= form_for(@booking) do |f| %>
 
     <div class="field">
@@ -56,8 +61,5 @@
   <% end %>
 </div>
 
-<%= render 'rooms/index' %>
-<br>
-<%= render 'users/index' %>
-<br>
+<h1>Bookings</h1>
 <%= render 'bookings/index' %>
