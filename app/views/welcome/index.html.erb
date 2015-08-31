@@ -1,0 +1,43 @@
+<div id="userAdd">
+  <h1>Add a user</h1>
+  <%= form_for(@user) do |f| %>
+
+    <div class="field">
+      <h4><%= f.label "Please enter a name" %><br>
+      <%= f.text_field :name %></h4>
+    </div>
+  <% end %>
+</div>
+
+<div id="bookingAdd">
+  <h1>Add a booking</h1>
+  <%= form_for(@booking) do |f| %>
+
+    <div class="field">
+      <h4><%= f.label "Please enter a user number" %><br>
+      <%= f.text_field :user_id %></h4>
+    </div>
+
+    <div class="field">
+      <h4><%= f.label "Please enter a room number" %><br>
+        <%= f.text_field :room_id %></h4>
+    </div>
+
+    <div class="field formdate">
+      <h4><%= f.label "Select a start time" %><br>
+      <%= f.datetime_select :start_time %></h4>
+    </div>
+
+    <div class="field formdate">
+      <h4><%= f.label "Select an end time" %><br>
+      <%= f.datetime_select :end_time %></h4>
+    </div>
+
+    <div class="actions">
+      <%= f.submit 'Add', :class => 'btn btn-success', :id => "stgbutton" %>
+    </div>
+
+  <% end %>
+</div>
+
+<%= render 'bookings/index' %>
