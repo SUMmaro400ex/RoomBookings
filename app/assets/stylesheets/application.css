@@ -17,15 +17,23 @@
 .hidden{
   display: none;
 }
-th{
-  text-align: left;
+.custom th {
+
+  text-align: center;
 }
-td{
-  /*border: 1px solid black;*/
+.custom td{
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  border: 1px solid black;
 }
 .yieldArea{
   padding: 10px;
-  background-color: #03A9F4;
+  background-color: #2babe1;
   color: #212121;
   height: 100vh;
+}
+a{
+  color: darkblue !important;
+  text-decoration: underline !important;
 }

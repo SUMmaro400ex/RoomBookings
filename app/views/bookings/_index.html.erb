@@ -41,14 +41,14 @@
 <%# end %>
 <%= link_to "Clear Filters", root_path %>
 <table>
-  <tr>
+  <tr class="custom">
     <th>User</th>
     <th>Room</th>
     <th>Start Time</th>
     <th>End Time</th>
   </tr>
 <% @bookings.each do |b| %>
-  <tr>
+  <tr class="custom">
     <td><%= b.user.name %></td>
     <td><%= b.room.room_number %></td>
     <td><%= b.start_time %></td>
