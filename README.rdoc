@@ -1,28 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Room Booking application
 
-Things you may want to cover:
+* Add users that can book a room
 
-* Ruby version
+* Add rooms that can be booked
 
-* System dependencies
+* Add a booking to the schedule
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Filter bookings by people, rooms, and time
