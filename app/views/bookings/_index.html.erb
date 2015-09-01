@@ -1,3 +1,45 @@
+
+<%= form_tag '', :method => :get do %>
+  <%= label_tag :name, "Search by user's name" %>
+  <%= text_field_tag :name %>
+  <%= submit_tag 'Filter' %>
+<% end %><br>
+<%= form_tag '', :method => :get do %>
+  <%= label_tag :room_number, "Search by room number" %>
+  <%= text_field_tag :room_number %>
+  <%= submit_tag 'Filter' %>
+<% end %><br>
+<%= form_tag '', :method => :get do %>
+  <%= label_tag :start, "Search by start date" %>
+  <%= date_field_tag :start %>
+  <%= submit_tag 'Filter' %>
+<% end %><br>
+<%= form_tag '', :method => :get do %>
+  <%= label_tag :start_time, "Search by start time" %>
+  <%= time_field_tag :start_time %>
+  <%= submit_tag 'Filter' %>
+<% end %><br>
+<%= form_tag '', :method => :get do %>
+  <%= label_tag :end, "Search by end date" %>
+  <%= date_field_tag :end %>
+  <%= submit_tag 'Filter' %>
+<% end %><br>
+<%= form_tag '', :method => :get do %>
+  <%= label_tag :end_time, "Search by end time" %>
+  <%= time_field_tag :end_time %>
+  <%= submit_tag 'Filter' %>
+<% end %><br>
+  <%#= label_tag :start, "Search by start date" %>
+  <%#= date_field_tag :start %>
+  <%#= label_tag :start_time, "Search by start time" %>
+  <%#= time_field_tag :start_time %>
+  <%#= label_tag :end, "Search by end date" %>
+  <%#= date_field_tag :end %>
+  <%#= label_tag :end_time, "Search by end time" %>
+  <%#= time_field_tag :end_time %>
+  <%#= submit_tag 'Filter' %>
+<%# end %>
+<%= link_to "Clear Filters", root_path %>
 <table>
   <tr>
     <th>User</th>

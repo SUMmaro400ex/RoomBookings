@@ -11,14 +11,11 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new booking_params
-    respond_to do |format|
-      if @booking.save
-        format.html { redirect_to root_path, notice: 'Booking was successfully created.' }
-      else
-        format.html { render root_path }
-        format.json { render json: @booking.errors, status: :unprocessable_entity }
+      if @booking.valid
+        @booking.save
       end
-    end
+      redirect_to root_path
+
   end
 
   private
