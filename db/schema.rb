@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150831202413) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bookings", force: :cascade do |t|
     t.integer  "room_id"
     t.integer  "user_id"
@@ -22,8 +25,8 @@ ActiveRecord::Schema.define(version: 20150831202413) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "bookings", ["room_id"], name: "index_bookings_on_room_id"
-  add_index "bookings", ["user_id"], name: "index_bookings_on_user_id"
+  add_index "bookings", ["room_id"], name: "index_bookings_on_room_id", using: :btree
+  add_index "bookings", ["user_id"], name: "index_bookings_on_user_id", using: :btree
 
   create_table "rooms", force: :cascade do |t|
     t.string   "room_number"
@@ -37,4 +40,6 @@ ActiveRecord::Schema.define(version: 20150831202413) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "bookings", "rooms"
+  add_foreign_key "bookings", "users"
 end
