@@ -1,8 +1,16 @@
-<ul>
+<table>
+  <tr>
+    <th>User</th>
+    <th>Room</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+  </tr>
 <% @bookings.each do |b| %>
-  <li><%= b.user.name %>
-  <%= b.room.room_number %>
-  <%= b.start_time %>
-  <%= b.end_time %></li>
+  <tr>
+    <td><%= b.user.name %></td>
+    <td><%= b.room.room_number %></td>
+    <td><%= b.start_time %></td>
+    <td><%= b.end_time %></td>
+  </tr>
 <% end %>
-</ul>
+</table>
