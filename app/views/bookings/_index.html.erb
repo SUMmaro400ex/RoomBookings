@@ -44,15 +44,19 @@
   <tr class="custom">
     <th>User</th>
     <th>Room</th>
+    <th>Start Day</th>
     <th>Start Time</th>
+    <th>End Day</th>
     <th>End Time</th>
   </tr>
 <% @bookings.each do |b| %>
   <tr class="custom">
     <td><%= b.user.name %></td>
     <td><%= b.room.room_number %></td>
-    <td><%= b.start_time %></td>
-    <td><%= b.end_time %></td>
+    <td><%= b.start_time.to_date %></td>
+    <td><%= b.start_time.strftime("%I:%M%p") %></td>
+    <td><%= b.end_time.to_date %></td>
+    <td><%= b.end_time.strftime("%I:%M%p") %></td>
   </tr>
 <% end %>
 </table>
